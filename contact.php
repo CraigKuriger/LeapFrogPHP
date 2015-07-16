@@ -36,6 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_body = $email_body . "Email: " . $email . "<br>";
     $email_body = $email_body . "Message: " . $message;
 
+    $mail->isSMTP();
+    $mail->SMTPSecure = 'ssl';
+
     $mail->SetFrom($email, $name);
 	$address = "craig.kuriger@icloud.com";
 	$mail->AddAddress($address, "Leapfrog");
