@@ -28,7 +28,8 @@
 	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	            <ul class="nav navbar-nav">
 	            	<li class="<?php if ($section == "products") { echo "on"; } ?>"><a href="products.php">Products</a></li>
-	            	<li class="contact <?php if ($section == "contact") { echo "on"; } ?>"><a href="contact.php">Contact</a></li>
+<!-- 	            	<li class="contact <?php //if ($section == "contact") { echo "on"; } ?>"><a href="contact.php">Contact</a></li> -->
+					<li><a href="http://craig.kuriger.github.io"></a>Contact</li>
 	            	<li class="cart"><a target="paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=YSX2LYBHK55VE&display=1">Shopping Cart</a></li>
 	            </ul>
 	        </div>
