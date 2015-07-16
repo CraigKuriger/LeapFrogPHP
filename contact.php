@@ -11,25 +11,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 	// prevent email injection attacks by looking for malicious values
-    foreach( $_POST as $value ){
-        if( stripos($value,'Content-Type:') !== FALSE ){
-            echo "There was a problem with the information you entered.";    
-            exit;
-        }
-    }
+    // foreach( $_POST as $value ){
+    //     if( stripos($value,'Content-Type:') !== FALSE ){
+    //         echo "There was a problem with the information you entered.";    
+    //         exit;
+    //     }
+    // }
 
-    if ($_POST["address"] != "") {
-        echo "Your form submission has an error.";
-        exit;
-    }
+    // if ($_POST["address"] != "") {
+    //     echo "Your form submission has an error.";
+    //     exit;
+    // }
 
-    require_once("include/phpmailer/class.phpmailer.php");
-    $mail = new PHPMailer();
+    // require_once("include/phpmailer/class.phpmailer.php");
+    // $mail = new PHPMailer();
 
-    if (!$mail->ValidateAddress($email)){
-        echo "You must specify a valid email address.";
-        exit;
-    }
+    // if (!$mail->ValidateAddress($email)){
+    //     echo "You must specify a valid email address.";
+    //     exit;
+    // }
 
     $email_body = "";
     $email_body = $email_body . "Name: " . $name . "<br>";
@@ -43,13 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$mail->Subject    = "Hello From Leapfrog | " . $name;
  	$mail->MsgHTML($email_body);
 
-    if(!$mail->Send()) {
-      echo "There was a problem sending the email: " . $mail->ErrorInfo;
-      exit;
-    }
+    // if(!$mail->Send()) {
+    //   echo "There was a problem sending the email: " . $mail->ErrorInfo;
+    //   exit;
+    // }
 
-    header("Location: contact.php?status=thanks");
-    exit;
+    // header("Location: contact.php?status=thanks");
+    // exit;
 }
 ?><?php 
 
